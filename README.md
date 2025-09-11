@@ -1,6 +1,7 @@
 # sql_datawarehouse_analytics
 
-EDA on already established Data warehouse 
+EDA on already established Data warehouse.
+
 Cleansing process can be seen at: https://github.com/sthickpennyryan/sql_data_warehouse_project
 
 All project files as a result of this cleansing are contained within the Project files folder:
@@ -8,4 +9,7 @@ All project files as a result of this cleansing are contained within the Project
       Silver represents the cleaning and standardising the raw data into accurate usable information
       Gold is business ready data - to be used for analysis and is what our exploratory data analysis has used
 
+--- All files used will be found under 'Project files'
+
+This repository is to add upon my previous data warehouse project and begin analysis with an exploratory data analysis - all scripts used will be found under 'EDA scripts'
 
