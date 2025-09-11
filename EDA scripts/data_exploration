@@ -1,0 +1,20 @@
+3) Data Exploration
+---- identify earliest and latest dates (boundaries) 
+--- =============understand scope of data and timespan
+
+
+--- find the date of the first and last order
+SELECT 
+MAX(order_date) AS latest_order,
+MIN(order_date) AS first_order,
+DATEDIFF(year, MIN(order_date), MAX(order_date)) AS order_range_years
+FROM gold.fact_sales
+
+
+--- Find the youngest and oldest customer
+SELECT 
+MAX(birthday) AS oldest_birthdate,
+DATEDIFF(year, MIN(birthday), GETDATE()) AS oldest_customer,
+MIN(birthday) AS youngest_birthdate,
+DATEDIFF(year, MAX(birthday), GETDATE()) AS youngest_customer
+FROM gold.dim_customers
