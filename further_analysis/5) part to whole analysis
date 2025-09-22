@@ -1,0 +1,21 @@
+/* 5) part to whole analyis
+*/ 
+
+
+WITH contribution AS (
+
+SELECT 
+	p.category,
+	SUM(sales_amount) AS total_sales
+FROM gold.fact_sales s
+LEFT JOIN gold.dim_products p
+ON p.product_key = s.product_key
+GROUP BY category
+)
+SELECT 
+	category,
+	total_sales,
+	SUM(total_sales) OVER () AS overall_sales,
+	CONCAT(ROUND((CAST(total_sales AS FLOAT) / SUM(total_sales) OVER ()) * 100, 2), '%') AS percent_contribution
+FROM contribution
+ORDER BY total_sales DESC
