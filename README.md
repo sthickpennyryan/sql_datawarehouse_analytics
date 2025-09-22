@@ -1,6 +1,6 @@
 # sql_datawarehouse_analytics
 
-EDA on already established Data warehouse.
+EDA and advanced analytics on already established Data warehouse.
 
 Cleansing process can be seen at: https://github.com/sthickpennyryan/sql_data_warehouse_project
 
